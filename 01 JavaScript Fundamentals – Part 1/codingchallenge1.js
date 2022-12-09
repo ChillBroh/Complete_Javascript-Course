@@ -16,6 +16,7 @@ alert(markHigherBMI)
 
 function BMI(mass,height){
     return mass / height ** 2 ;
+    
 }
 
 
