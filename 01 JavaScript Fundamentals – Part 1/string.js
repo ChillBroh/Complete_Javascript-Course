@@ -15,4 +15,18 @@ whats up\n\
 console.log(`hello
 whatsup`) //or this way for multiple line stings
 
+//convert string to number
+let inputyear = 1991;
+
+console.log(inputyear + 10);
+console.log(Number(inputyear) + 10);
+console.log(typeof(inputyear));
+console.log(typeof(Number(inputyear)))
+
+//convert number to string
+console.log(20);
+console.log(String(20));
+
+//if we use -, *, /, > this will automatically convert string to number
+//+ will automatically converts number to string
 
