@@ -13,6 +13,7 @@ let dolphine = avg(dv1,dv2,dv3);
     alert("Score of kola is " + kola);
    
     alert(compare(kola,dolphine));
+    alert(winner(kola, dolphine));
 }
 
 
@@ -21,11 +22,26 @@ function avg(v1,v2,v3){
 }
 
 function compare(a,b){
-    let result =(a>b) ? `Kola is winner` : `Dolphine is winner`;
+    let result =(a>b) ? `Kola is Has winning chance` : `Dolphine has winning chance`;
     return result;
 }
 
 function winner(a,b){
+    let result;
 
+    if(a > b)
+        if(a > 100)
+            result = "kola is the winner";
+        else
+            result = "Kola Don't have required points";
+    else if( b > a)
+        if(b > 100)
+            result = "Dolphine is the winner";
+        else
+            result = "Kola Don't have required points";
+    else
+        result = "Match Draw";
+
+    return result;
 }
 
