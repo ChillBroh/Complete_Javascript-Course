@@ -18,7 +18,7 @@ function details(){
     }
     
     function BMI(mass,height){
-        return mass / height ** 2 ;   
+        return mass / height ** 2;   
     }
     
     
