@@ -22,7 +22,7 @@ function avg(v1,v2,v3){
 }
 
 function compare(a,b){
-    let result =(a>b) ? `Kola is Has winning chance` : `Dolphine has winning chance`;
+    let result =(a>b) ? `Kola is Has winning chance` :(b>a)? `Dolphine has winning chance`: "Match can be draw";
     return result;
 }
 
@@ -39,8 +39,11 @@ function winner(a,b){
             result = "Dolphine is the winner";
         else
             result = "Kola Don't have required points";
-    else
-        result = "Match Draw";
+    else if(a==b)
+        if(a >= 100 && b >= 100)
+            result = "Match Draw";
+        else
+            result = "No chance to draw or win";
 
     return result;
 }
