@@ -10,7 +10,8 @@ function details(){
     let mark_BMI = BMI(mark_M,mark_H);
     let jhon_BMI = BMI(jhon_M,jhon_H);
     
-    markHigherBMI = (mark_BMI > jhon_BMI) ? "Mark's BMI is higher than John's!" : "John's BMI is higher than Mark's!";
+    markHigherBMI = (mark_BMI > jhon_BMI) ? `Mark's BMI (${mark_BMI}) is higher than John's(${jhon_BMI})! ` : `John's BMI(${jhon_BMI}) is higher 
+    than Mark's(${jhon_BMI})!`;
     alert("Mark's BMI is " + mark_BMI);
     alert("Jhon's BMI is " + jhon_BMI);
     alert(markHigherBMI)
