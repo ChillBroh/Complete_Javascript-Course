@@ -1,4 +1,5 @@
 
+let markHigherBMI;
 function details(){
     
     let mark_M = document.getElementById("mass1").value;
@@ -9,7 +10,7 @@ function details(){
     let mark_BMI = BMI(mark_M,mark_H);
     let jhon_BMI = BMI(jhon_M,jhon_H);
     
-    let markHigherBMI = (mark_BMI > jhon_BMI) ? "true" : "false";
+    markHigherBMI = (mark_BMI > jhon_BMI) ? "true" : "false";
     alert("Mark's BMI is " + mark_BMI);
     alert("Jhon's BMI is " + jhon_BMI);
     alert(markHigherBMI)
