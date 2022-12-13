@@ -7,5 +7,5 @@
         return total/arr.length;
   }
 
-  const array = [20,10,10,30,30];
+  const array = [20,10,10,30,30 ];
   console.log(calcAverage(array));
