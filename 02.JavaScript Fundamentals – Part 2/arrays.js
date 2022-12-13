@@ -24,3 +24,13 @@ console.log(friend);
 const removeFront = friend.shift();
 console.log(removeFront)
 console.log(friend)
+
+//check position of element
+console.log(friend.indexOf("sara"))
+console.log(friend.indexOf("ishara"))
+
+//check if the element exsits in array
+console.log(friend.includes("AJ"))
+friend.push(23)
+console.log(friend.includes("23"))
+console.log(friend.includes(23))
