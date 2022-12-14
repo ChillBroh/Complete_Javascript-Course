@@ -43,4 +43,27 @@ main {
   padding: 43px;
   border-top: 10px #eee solid;
   margin-top: 88px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right {
+  background-color: yellow;
+  width: 52rem;
+  font-size: 2rem;
+}
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-check {
+  height: 100px;
+  width: 270px;
+  text-align: center;
+  font-size: 50px;
 }
