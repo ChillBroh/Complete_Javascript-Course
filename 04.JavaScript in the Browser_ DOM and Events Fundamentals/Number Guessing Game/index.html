@@ -16,7 +16,11 @@
   </head>
   <body>
     <header>
-      <button type="button" class="btn btn-primary again-btn btn-lg">
+      <button
+        type="button"
+        class="btn btn-primary again-btn btn-lg"
+        onclick="again()"
+      >
         Again
       </button>
       <h2 class="between">Between 1 and 20</h2>
@@ -26,13 +30,15 @@
     <main>
       <section class="left">
         <input type="number" class="input-check" /><br />
-        <button class="check-btn btn btn-danger btn-lg">Check</button>
+        <button class="check-btn btn btn-danger btn-lg" onclick="input()">
+          Check
+        </button>
       </section>
       <section class="right">
         <p class="guessing">Start Guessing....</p>
         <p class="score-title">Score : <span class="score-value">20</span></p>
         <p class="high-score-title">
-          Hight Score : <span class="high-score-value">0</span>
+          High Score : <span class="high-score-value">0</span>
         </p>
       </section>
     </main>
