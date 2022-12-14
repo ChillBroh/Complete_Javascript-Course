@@ -50,12 +50,11 @@ main {
 }
 
 .right {
-  background-color: yellow;
-  width: 52rem;
+  width: 40%;
   font-size: 2rem;
 }
 .left {
-  width: 52rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,4 +65,10 @@ main {
   width: 270px;
   text-align: center;
   font-size: 50px;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  font-size: larger;
 }
