@@ -19,7 +19,7 @@ current1.innerHTML = 0;
 dice.classList.add("hidden");
 
 const again = () => {
-  scores = 0;
+  scores = [0, 0];
   activeplayer = 0;
   current = 0;
   playing = true;
@@ -58,11 +58,34 @@ btnRoll.addEventListener("click", function () {
       document.getElementById(`current--${activeplayer}`).innerHTML = current;
     } else {
       //switch to next player
-      scores = current;
-      document.getElementById(`score--${activeplayer}`).innerHTML = scores;
       switchP();
     }
   }
 });
 
-btnHold.addEventListener("click", function () {});
+btnHold.addEventListener("click", function () {
+  if (playing) {
+    scores[activeplayer] += current;
+    console.log(scores[activeplayer]);
+    document.getElementById(`score--${activeplayer}`).innerHTML =
+      scores[activeplayer];
+
+    if (scores[activeplayer] >= 100) {
+      playing = false;
+      dice.classList.add("hidden");
+
+      document
+        .querySelector(`.player--${activeplayer}`)
+        .classList.add("player--winner");
+      document
+        .querySelector(`.player--${activeplayer}`)
+        .classList.remove("player--active");
+
+      document
+        .querySelector(`.winner--${activeplayer}`)
+        .classList.remove("hiddenx");
+    } else {
+      switchP();
+    }
+  }
+});

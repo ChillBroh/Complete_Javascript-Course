@@ -175,6 +175,10 @@ body {
   display: none;
 }
 
+.hiddenx {
+  display: none;
+}
+
 footer {
   margin-top: 10px;
   margin-left: 420px;
