@@ -30,9 +30,15 @@ const again = () => {
   current1.innerHTML = 0;
 
   dice.classList.add("hidden");
+  document.querySelector(".winner--0").classList.add("hiddenx");
+  document.querySelector(".winner--1").classList.add("hiddenx");
+  player0.classList.remove("player--winner");
+  player1.classList.remove("player--winner");
+  player0.classList.add("player--active");
+  player1.classList.remove("player--active");
 };
-//create a newgame
-btnNew.addEventListener("click", again);
+//calling new game when loading
+again();
 
 //switch current player
 const switchP = () => {
@@ -89,3 +95,5 @@ btnHold.addEventListener("click", function () {
     }
   }
 });
+//create a newgame
+btnNew.addEventListener("click", again);
