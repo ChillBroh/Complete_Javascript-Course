@@ -19,6 +19,20 @@ body {
 .show-modal {
   margin-top: 50px;
   margin-right: 163px;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border-color: blueviolet;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+
+.show-modal:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-10px);
+  transition: 500ms;
 }
 
 .close-modal {
