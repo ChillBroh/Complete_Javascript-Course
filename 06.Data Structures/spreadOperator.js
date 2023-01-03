@@ -16,6 +16,10 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  pasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+  },
 };
 
 const newMenu = [...restaurant.mainMenu, "Gnocci"];
@@ -29,3 +33,15 @@ console.log(allFoods);
 const str = "Ishara";
 console.log(...str);
 console.log(...str[2]);
+
+const ingredients = [
+  prompt("Ingredient 1?"),
+  prompt("Ingredient 2?"),
+  prompt("Ingredient 3?"),
+];
+console.log(ingredients);
+
+// restaurant.pasta(ingredients[1], ingredients[2], ingredients[3]);
+restaurant.pasta(...ingredients);
+
+//spread for objects
