@@ -25,3 +25,14 @@ console.log(p, q);
 console.log(p, q); //swap two variable values without intermediate variable
 
 console.log(restaurant.order(2, 0));
+let [starter, main] = restaurant.order(2, 0);
+console.log(starter, main);
+
+const nested = [2, 4, [5, 6]];
+//only get whole array part for b
+const [a, , b] = nested;
+console.log(a, b);
+
+//get single element for each variable
+const [c, , [d, e]] = nested;
+console.log(c, d, e);
