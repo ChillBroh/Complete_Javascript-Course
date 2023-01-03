@@ -44,6 +44,10 @@ console.log(ingredients);
 // restaurant.pasta(ingredients[1], ingredients[2], ingredients[3]);
 restaurant.pasta(...ingredients);
 
-//spread for objects
+//spread for objects (From es6)
 const newRestaruent = { foundIn: 1191, ...restaurant, founder: "Ishara" };
 console.log(newRestaruent);
+
+const copyRestarurent = { ...restaurant };
+copyRestarurent.name = "ChillBroh";
+console.log(copyRestarurent);
