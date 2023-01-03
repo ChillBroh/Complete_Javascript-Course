@@ -13,3 +13,7 @@ console.log(0 && "Ishara");
 console.log(0 && null);
 console.log("Ishara" && 0);
 console.log(3 && "Ishara"); //no short circuting
+
+guest = 15; //0, null, undefined and empty string will out 10
+const guestCorrect = guest ? guest : 10;
+console.log(guestCorrect);
