@@ -20,3 +20,12 @@ const restaurant = {
 
 const newMenu = [...restaurant.mainMenu, "Gnocci"];
 console.log(newMenu);
+
+const allFoods = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(allFoods);
+
+//itterables: arrays, strings, maps, sets but not objects
+
+const str = "Ishara";
+console.log(...str);
+console.log(...str[2]);
