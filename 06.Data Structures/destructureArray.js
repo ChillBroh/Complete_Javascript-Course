@@ -16,7 +16,9 @@ const restaurant = {
   },
 };
 
-let [p, , q] = restaurant.categories;
+let [r, , s] = restaurant.categories;
+console.log(r, s);
+let [p, , , q] = restaurant.categories;
 console.log(p, q);
 
 [p, q] = [q, p];
