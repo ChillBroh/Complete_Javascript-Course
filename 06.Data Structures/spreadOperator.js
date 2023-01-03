@@ -45,3 +45,5 @@ console.log(ingredients);
 restaurant.pasta(...ingredients);
 
 //spread for objects
+const newRestaruent = { foundIn: 1191, ...restaurant, founder: "Ishara" };
+console.log(newRestaruent);
