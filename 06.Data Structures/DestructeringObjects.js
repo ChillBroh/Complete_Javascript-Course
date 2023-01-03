@@ -19,10 +19,8 @@ const restaurant = {
 };
 
 object = {
-  time: "22.30",
+  time: "22:30",
   address: "Galle, Srilanka",
   mainIndex: 2,
   starterIndex: 2,
 };
-
-restaurant.orderDelivery(object);
