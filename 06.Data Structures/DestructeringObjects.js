@@ -24,3 +24,5 @@ object = {
   mainIndex: 2,
   starterIndex: 2,
 };
+
+restaurant.orderDelivery(object);
