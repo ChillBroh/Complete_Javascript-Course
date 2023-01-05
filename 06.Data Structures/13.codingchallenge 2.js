@@ -61,3 +61,24 @@ for (const [key, value] of Object.entries(game.odds)) {
   console.log(`odd of ${result} : ${value}`);
   i += 1;
 }
+
+//bonus
+let goals = 0;
+let test = [];
+let obj = {};
+for (const x of game.scored) {
+  if (!test.includes(x)) {
+    test.push(x);
+  }
+}
+console.log(test);
+for (const name of test) {
+  for (const chk of game.scored) {
+    name === chk ? (goals += 1) : goals;
+  }
+  obj: {
+    `${name} : ${goals}`;
+  }
+  goals = 0;
+}
+console.log(obj);
