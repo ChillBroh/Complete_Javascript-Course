@@ -26,14 +26,20 @@ orderSet.add('Garlic Bread');
 orderSet.delete('Risotto');
 console.log(orderSet);
 
-//delete all elemens in the set
-// orderSet.clear();
-// console.log(orderSet);
-
 //cannot get data out from the set in js
 
 //itarate data from set
-
 for (const order of orderSet) {
   console.log(order);
 }
+
+//delete all elemens in the set
+orderSet.clear();
+console.log(orderSet);
+
+const staffArr = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffSet = [...new Set(staffArr)];
+console.log(staffSet);
+console.log(
+  new Set('Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter').size
+);
