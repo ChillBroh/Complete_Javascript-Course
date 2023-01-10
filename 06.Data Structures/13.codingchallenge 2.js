@@ -74,8 +74,8 @@ for (const x of game.scored) {
 }
 console.log(test);
 for (const name of test) {
-  for (const chk of game.scored) {
-    name === chk ? (goals += 1) : goals;
+  for (const check of game.scored) {
+    name === check ? (goals += 1) : goals;
   }
   console.log(`${name}: ${goals}`);
   goals = 0;
