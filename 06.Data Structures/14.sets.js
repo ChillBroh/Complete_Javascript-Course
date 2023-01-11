@@ -4,7 +4,7 @@ const orderSet = new Set([
   'Pizza',
   'Risotto',
   'Pasta',
-  'Pizza',
+  'pizza',
 ]);
 console.log(orderSet); //this will remove the duplicates in the list
 
