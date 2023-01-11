@@ -24,3 +24,25 @@ const checkMiddleSeat = (seat) => {
 checkMiddleSeat("11B");
 checkMiddleSeat("23C");
 checkMiddleSeat("3E");
+
+//string objects
+const name = "Ishara";
+const name2 = new String("Ishara");
+
+console.log(name);
+console.log(name2);
+
+console.log(typeof name);
+console.log(typeof name2);
+
+const passenger = "ISHara";
+const pasName = passenger[0].toUpperCase() + passenger.slice(1).toLowerCase();
+console.log(pasName);
+
+const passenger3 = "    IshaRa\n";
+
+const trimmedName = passenger3.trim();
+const finalName =
+  trimmedName[0].toUpperCase() + trimmedName.slice(1).toLowerCase();
+const chk = pasName === finalName;
+console.log(chk);
