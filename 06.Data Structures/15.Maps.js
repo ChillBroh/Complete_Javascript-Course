@@ -23,6 +23,11 @@ console.log(rest.get(time >= rest.get('open') && time <= rest.get('close')));
 time = 9;
 console.log(rest.get(time >= rest.get('open') && time <= rest.get('close')));
 
+//convert map to array
+console.log([...rest]);
+console.log([...rest.keys()]);
+console.log([...rest.values()]);
+
 //check availability
 console.log(rest.has('Categories'));
 
