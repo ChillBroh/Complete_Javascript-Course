@@ -9,7 +9,7 @@ console.log(...rest);
 
 rest
   .set('Categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-  .set('opne', 11)
+  .set('open', 11)
   .set('close', 23)
   .set(true, 'We are open')
   .set(false, 'Sorry we are closed');
@@ -17,3 +17,28 @@ rest
 //get outputs from map
 console.log(rest.get('Name'));
 console.log(rest.get(true));
+
+let time = 21;
+console.log(rest.get(time >= rest.get('open') && time <= rest.get('close')));
+time = 9;
+console.log(rest.get(time >= rest.get('open') && time <= rest.get('close')));
+
+//convert map to array
+console.log([...rest]);
+console.log([...rest.keys()]);
+console.log([...rest.values()]);
+
+//check availability
+console.log(rest.has('Categories'));
+
+//remove pairs from map
+console.log(rest);
+rest.delete(2);
+console.log(rest);
+
+//get size of map
+console.log(rest.size);
+
+//remove all elements
+rest.clear();
+console.log(rest);
