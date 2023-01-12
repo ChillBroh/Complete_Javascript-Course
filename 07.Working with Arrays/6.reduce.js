@@ -17,3 +17,11 @@ const totalWithdrawals = Math.abs(
 
 console.log(`Total amounts of deposites : ${totalDeposites} 
 Total amounts of withdrawals : ${totalWithdrawals}`);
+
+//finc max
+const max = movements.reduce((acc, val) => {
+  if (acc > val) return acc;
+  else return val;
+}, movements[0]);
+
+console.log(max);
