@@ -1,12 +1,9 @@
 'use strict';
-const julia = [3, 5, 2, 12, 7];
-const kate = [4, 1, 15, 8, 3];
-let humanAges = [];
-const calcAverageHumanAge = (i, arr) => {
-  let humanAge;
-  if (arr[i] <= 2) 2 * arr[i];
-  else if (arr[i] > 2) 16 + arr[i] * 4;
-  humanAges.push(humanAge);
+const julia = [5, 2, 4, 1, 15, 8, 3];
+const kate = [16, 6, 10, 5, 6, 1, 4];
+
+const calcAverageHumanAge = arr => {
+  const humanAge = arr.map(age => (age <= 2 ? age * 2 : 16 + age * 4));
+  console.log(humanAge);
 };
 calcAverageHumanAge(julia);
-console.log(humanAges);
