@@ -5,5 +5,9 @@ const kate = [16, 6, 10, 5, 6, 1, 4];
 const calcAverageHumanAge = arr => {
   const humanAge = arr.map(age => (age <= 2 ? age * 2 : 16 + age * 4));
   console.log(humanAge);
+  const filtHuman = humanAge.filter(age => age > 18);
+  const avgHuman =
+    filtHuman.reduce((acc, age) => acc + age, 0) / filtHuman.length;
+  return avgHuman;
 };
-calcAverageHumanAge(julia);
+console.log(calcAverageHumanAge(julia));
