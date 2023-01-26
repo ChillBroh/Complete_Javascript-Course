@@ -42,7 +42,7 @@ const getCountryData = function (country) {
       if (!neighbour) return;
 
       //ajax call 2
-      fetch(`https://restcountries.com/v2/name/${neighbour}`);
+      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
     })
     .then((response) => response.json())
     .then((data) => renderCountry(data, 'neighbour'));
