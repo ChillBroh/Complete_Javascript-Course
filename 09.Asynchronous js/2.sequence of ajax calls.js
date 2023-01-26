@@ -6,9 +6,9 @@ const countriesContainer = document.querySelector('.countries');
 ///////////////////////////////////////
 
 //function for render coutry details
-const renderCountry = (data) => {
+const renderCountry = (data, calssName = '') => {
   const html = ` 
-    <article class="country">
+    <article class="country ${calssName}">
     <img class="country__img" src="${data.flag}" />
     <div class="country__data">
       <h3 class="country__name">${data.name}</h3>
@@ -46,6 +46,11 @@ const countryAndNeighbour = (country) => {
     const request2 = new XMLHttpRequest();
     request2.open('GET', `https://restcountries.com/v2/alpha/${neighbour}`); //get country code without name using 3letters
     request2.send();
+
+    request2.addEventListener('load', function () {
+      const data = JSON.parse(request2.responseText);
+      renderCountry(data, 'neighbour');
+    });
   });
 };
 
