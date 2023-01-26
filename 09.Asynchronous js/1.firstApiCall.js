@@ -8,7 +8,7 @@ const countryData = (country) => {
   //this is  the most old method xmlhttprequest
   const request = new XMLHttpRequest();
   //open requst
-  request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
+  request.open('GET', `https://restcountries.com/v2/name/${country}`);
   //send request
   request.send();
 
@@ -17,7 +17,6 @@ const countryData = (country) => {
     //convert jason file to js object
     const [data] = JSON.parse(this.responseText);
     console.log(data);
-    console.log(data.languages);
 
     const html = ` 
   <article class="country">
@@ -28,8 +27,8 @@ const countryData = (country) => {
     <p class="country__row"><span>👫</span>${(
       data.population / 1000000
     ).toFixed(1)}M</p>
-    <p class="country__row"><span>🗣️</span>${data.languages.name}</p>
-    <p class="country__row"><span>💰</span>${data.currencies.name}</p>
+    <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
+    <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
   </div>
 </article>`;
 
