@@ -7,10 +7,12 @@ const countriesContainer = document.querySelector('.countries');
 const countryData = (country) => {
   //this is  the most old method xmlhttprequest
   const request = new XMLHttpRequest();
+
   //open requst
   request.open('GET', `https://restcountries.com/v2/name/${country}`);
   //send request
   request.send();
+  console.log(request);
 
   //add event listner when call a function after the ajax call done loading
   request.addEventListener('load', function () {
