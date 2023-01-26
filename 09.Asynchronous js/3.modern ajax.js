@@ -1,4 +1,7 @@
 'use strict';
+
+const btn = document.querySelector('.btn-country');
+const countriesContainer = document.querySelector('.countries');
 //old way
 /*
      const request = new XMLHttpRequest();
@@ -29,6 +32,7 @@ const renderCountry = (data, calssName = '') => {
 const request = fetch('https://restcountries.com/v2/name/Sri Lanka');
 console.log(request);
 
+//practically using
 const getCountryData = function (country) {
   fetch(`https://restcountries.com/v2/name/${country}`)
     .then((response) => response.json())
@@ -36,3 +40,4 @@ const getCountryData = function (country) {
 };
 
 getCountryData('Sri Lanka');
+getCountryData('usa');
