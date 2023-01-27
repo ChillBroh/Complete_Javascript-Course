@@ -62,8 +62,9 @@ const getCountryData = function (country) {
     })
     .then((response) => response.json())
     .then((data) => renderCountry(data, 'neighbour'))
-    .catch((err) =>
-      getCountryError(`Something went wrong, ${err.message}. Try Again!`)
+    .catch(
+      (err) =>
+        getCountryError(`Something went wrong, ${err.message}. Try Again!`) //error messaage will be the thrown one
     );
 };
 
