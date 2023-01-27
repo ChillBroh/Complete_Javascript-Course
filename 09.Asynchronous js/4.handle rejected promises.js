@@ -28,6 +28,12 @@ const renderCountry = (data, calssName = '') => {
   countriesContainer.style.opacity = 1;
 };
 
+//show error
+const getCountryError = (msg) => {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+  countriesContainer.style.opacity = 1;
+};
+
 //modern way
 const request = fetch('https://restcountries.com/v2/name/Sri Lanka');
 console.log(request);
@@ -49,7 +55,9 @@ const getCountryData = function (country) {
     })
     .then((response) => response.json())
     .then((data) => renderCountry(data, 'neighbour'))
-    .catch((arr) => alert(arr));
+    .catch((err) =>
+      getCountryError(`Something went wrong, ${err.message}.Try Again!`)
+    );
 };
 
 btn.addEventListener('click', function () {
