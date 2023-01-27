@@ -43,7 +43,12 @@ const getCountryData = function (country) {
   fetch(`https://restcountries.com/v2/name/${country}`)
     .then(
       (response) => {
-        response.json();
+        console.log(response);
+
+        if (!response.ok)
+          throw new Error(`Country ${response.status} not found!`);
+
+        return response.json();
       }
       //   (arr) => alert(arr) instead of this we can add catch at the end of the chain
     )
@@ -58,10 +63,10 @@ const getCountryData = function (country) {
     .then((response) => response.json())
     .then((data) => renderCountry(data, 'neighbour'))
     .catch((err) =>
-      getCountryError(`Something went wrong, ${err.message}.Try Again!`)
+      getCountryError(`Something went wrong, ${err.message}. Try Again!`)
     );
 };
 
 btn.addEventListener('click', function () {
-  getCountryData('Sri Lanka');
+  getCountryData('hjkfukkti');
 });
