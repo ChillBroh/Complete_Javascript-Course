@@ -43,12 +43,22 @@ const whereAmI = function (lat, lng) {
   fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then((response) => {
       console.log(response);
-      if (response.ok) throw new Error('Having trouble getting data');
+      if (!response.ok) throw new Error('Having trouble getting data');
       return response.json();
     })
     .then((data) => {
       console.log(data);
       console.log(`You are in ${data.city}, ${data.country}`);
+      return fetch(`https://restcountries.com/v2/name/${data.country}`);
+    })
+    .then((response) => {
+      if (!response.ok) throw new Error(`Country Not Found `);
+
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      console.log(`Language is ${data[0].languages[0].name}`);
     })
     .catch((err) => console.log(`Something Went Wrong ${err}. Try again!`));
 };
