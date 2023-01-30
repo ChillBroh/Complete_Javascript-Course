@@ -8,8 +8,11 @@ Promise.resolve('Resolved Promise 1').then((res) => console.log(res));
 
 Promise.resolve('Resolved promise 2').then((res) => console.log(res));
 //always promises put in the micro task q
+
+//first promise will put in micro task q and resolve right afer promise 2 but loop will stop the imediate execution
 Promise.resolve('Resolved Promise 3').then((res) => {
   for (let i = 0; i < 10000000000; i++) {}
   console.log(res);
 });
+
 console.log('Test End');
