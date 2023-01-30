@@ -16,3 +16,20 @@ const lottary = new Promise((resolve, reject) => {
 });
 
 lottary.then((res) => console.log(res)).catch((err) => console.log(err));
+
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+//this will avoid call back hell
+wait(1) //this will execute cause lottary take 2seconds and this will take only one sec
+  .then(() => {
+    console.log('1 sec');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('2 sec');
+    return wait(1);
+  });
