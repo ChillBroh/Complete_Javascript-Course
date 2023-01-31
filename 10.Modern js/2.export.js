@@ -11,5 +11,6 @@ import add from "./3.default export.js"; //can give any name, no ndd of curly br
 console.log(SHoppintCart);
 SHoppintCart.addToCart("bread", 5);
 console.log(SHoppintCart.totalPrice);
+console.log(SHoppintCart.cart);
 
 add("Tomato", 6);
