@@ -11,4 +11,4 @@ export const addToCart = (product, quantity) => {
 const totalPrice = 230;
 const totalQuantity = 50;
 
-export { totalPrice, totalQuantity };
+export { totalPrice, totalQuantity as qt }; //export more than one
