@@ -34,31 +34,41 @@ const getCountryError = (msg) => {
   countriesContainer.style.opacity = 1;
 };
 
+//Jason
+const getJason = function (url, error = 'Something is not right!!') {
+  return fetch(url).then((response) => {
+    console.log(response);
+
+    if (!response.ok) throw new Error(`${error} ${response.status} `);
+
+    return response.json();
+  });
+};
+
 //modern way
 const request = fetch('https://restcountries.com/v2/name/Sri Lanka');
 console.log(request);
 
 //practically using
 const getCountryData = function (country) {
-  fetch(`https://restcountries.com/v2/name/${country}`)
-    .then(
-      (response) => {
-        response.json();
-      }
-      //   (arr) => alert(arr) instead of this we can add catch at the end of the chain
-    )
+  getJason(`https://restcountries.com/v2/name/${country}`, 'Country Not found')
     .then((data) => {
       renderCountry(data[0]);
       const neighbour = data[0].borders[0];
-      if (!neighbour) return;
+      //   const neighbour = 'hehe';
+
+      if (!neighbour) throw new Error('There is no neighbour for the Country');
 
       //ajax call 2
-      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+      return getJason(
+        `https://restcountries.com/v2/alpha/${neighbour}`,
+        `Neighbour Country not found!`
+      );
     })
-    .then((response) => response.json())
     .then((data) => renderCountry(data, 'neighbour'))
-    .catch((err) =>
-      getCountryError(`Something went wrong, ${err.message}.Try Again!`)
+    .catch(
+      (err) =>
+        getCountryError(`Something went wrong, ${err.message}. Try Again!`) //error messaage will be the thrown one
     );
 };
 
