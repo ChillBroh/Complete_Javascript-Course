@@ -1,10 +1,14 @@
-//map use to map values to keys
-const rest = new Map();
-rest.set('Name', 'Classico Italiano');
-rest.set(1, 'Lisbon, Portugal');
-
-//this set method set values to map and also it will return the values
-console.log(rest.set(2, 'Firenze, Italy'));
-console.log(rest.set(2, 'Firenze, Italy'));
-
-rest.set('Categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']);
+openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },

@@ -1,5 +1,5 @@
 "use strict";
-//primitive types
+//primitive types- they are immutable. not refferencing.only create new variables
 let lastName = "Madusanka";
 let oldLastName = lastName;
 lastName = "chill";
@@ -31,4 +31,8 @@ friend2.family.push("AJ"); //this will add to both object. because this is not a
 console.log(me2);
 console.log(friend2);
 
-//deep clone will learn in upcomming lectures
+//deep clone
+const friend3 = structuredClone(me2);
+friend2.family.push("Sehan");
+console.log(me2);
+console.log(friend3);
